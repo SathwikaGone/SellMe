@@ -22,9 +22,12 @@ export default function Home() {
         ></Image>
         <Text style={styles.text}>Selle what you dont want</Text>
       </View>
-
-      <View style={styles.loginButton}></View>
-      <View style={styles.signupButton}></View>
+      <View style={styles.loginButton}>
+        <Text style={styles.appText}>Login</Text>
+      </View>
+      <View style={styles.signupButton}>
+        <Text style={styles.appText}>Sign Up</Text>
+      </View>
     </ImageBackground>
   );
 }
@@ -37,12 +40,21 @@ const styles = StyleSheet.create({
   },
   loginButton: {
     width: "100%",
-    height: 70,
+    height: 60,
     backgroundColor: "pink",
+    borderRadius: 40,
+    margin: 5,
+    justifyContent: "center",
+  },
+  appText: {
+    fontSize: 22,
+    textAlign: "center",
+    textTransform: "uppercase",
+    color: "white",
   },
   logo: {
-    width: 100,
-    height: 100,
+    width: 150,
+    height: 150,
   },
   logoContainer: {
     position: "absolute",
@@ -51,7 +63,10 @@ const styles = StyleSheet.create({
   },
   signupButton: {
     width: "100%",
-    height: 70,
+    height: 60,
     backgroundColor: "lightblue",
+    borderRadius: 40,
+    justifyContent: "center",
+    margin: 15,
   },
 });

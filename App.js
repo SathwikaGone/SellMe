@@ -3,6 +3,8 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import Home from "./src/screens/Home";
 import ViewImage from "./src/screens/ViewImage";
+import DisplayCard from "./src/screens/DisplayCard";
+
 export default function App() {
   return <ViewImage />;
 }
