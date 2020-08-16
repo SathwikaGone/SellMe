@@ -3,6 +3,7 @@ import { StyleSheet, View, Image } from "react-native";
 import AppTextInput from "../components/AppTextInput";
 import AppButton from "../components/AppButton";
 import Screen from "../components/screen";
+import { Formik } from "formik";
 
 export default function LoginScreen() {
   return (
@@ -10,15 +11,30 @@ export default function LoginScreen() {
       <View style={styles.logoContainer}>
         <Image source={require("../../assets/logo.png")} style={styles.logo} />
       </View>
-      <View style={styles.form}>
-        <AppTextInput icon="email" placeholder="Email Address" />
-        <AppTextInput icon="lock" placeholder="Password" secureTextEntry />
-        <AppButton
-          title="Login"
-          color="coral"
-          onPress={() => console.log("login")}
-        />
-      </View>
+
+      <Formik
+        initialValues={{ email: "", password: "" }}
+        onSubmit={(values) => console.log("submitted", values)}
+      >
+        {({ handleChange, handleSubmit }) => (
+          <View style={styles.form}>
+            <AppTextInput
+              icon="email"
+              name="email"
+              placeholder="Email Address"
+              onChangeText={handleChange("email")}
+            />
+            <AppTextInput
+              icon="lock"
+              name="password"
+              placeholder="Password"
+              secureTextEntry
+              onChangeText={handleChange("password")}
+            />
+            <AppButton title="Login" color="coral" onPress={handleSubmit} />
+          </View>
+        )}
+      </Formik>
     </Screen>
   );
 }
