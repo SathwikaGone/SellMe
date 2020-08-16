@@ -7,8 +7,9 @@ import DisplayCard from "./src/screens/DisplayCard";
 import ListingDetails from "./src/screens/listingDetails";
 import MessageScreen from "./src/screens/MessageScreen";
 import MyAccountScreen from "./src/screens/MyAccountScreen";
+
 export default function App() {
-  return <MyAccountScreen />;
+  return <DisplayCard />;
 }
 
 const styles = StyleSheet.create({
