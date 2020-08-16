@@ -4,4 +4,5 @@ export default {
   yellow: "#ffe66d",
   white: "#fff",
   black: "#000",
+  coral: "#FF7F50",
 };
