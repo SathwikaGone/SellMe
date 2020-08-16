@@ -8,9 +8,10 @@ import ListingDetails from "./src/screens/listingDetails";
 import MessageScreen from "./src/screens/MessageScreen";
 import MyAccountScreen from "./src/screens/MyAccountScreen";
 import LoginScreen from "./src/screens/LoginScreen";
+import RegistrationScreen from "./src/screens/RegisterScreen";
 
 export default function App() {
-  return <LoginScreen />;
+  return <RegistrationScreen />;
 }
 
 const styles = StyleSheet.create({

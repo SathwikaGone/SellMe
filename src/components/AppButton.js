@@ -1,21 +1,18 @@
 import React from "react";
 import { StyleSheet, Button, View } from "react-native";
 
-export default function AppButton({ title, onPress, ...otherProps }) {
+export default function AppButton({ title, onPress, color, ...otherProps }) {
   return (
-    <View style={styles.button}>
-      <Button
-        title={title}
-        style={styles.button}
-        {...otherProps}
-        onPress={onPress}
-      />
+    <View style={styles.buttonComponent}>
+      <Button title={title} {...otherProps} onPress={onPress} color={color} />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  button: {
+  buttonComponent: {
     marginTop: 15,
+    width: "70%",
+    alignSelf: "center",
   },
 });

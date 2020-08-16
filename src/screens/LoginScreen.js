@@ -27,11 +27,14 @@ export default function LoginScreen() {
         {({ handleChange, handleSubmit, errors, touched, setFieldTouched }) => (
           <View style={styles.form}>
             <AppTextInput
+              autoCapitalize="none"
+              autoCorrect={false}
               icon="email"
               name="email"
               onBlur={() => setFieldTouched("email")}
               placeholder="Email Address"
               onChangeText={handleChange("email")}
+              keyboardType="email-address"
             />
             <ErrorMessage error={errors.email} touched={touched.email} />
             <AppTextInput
