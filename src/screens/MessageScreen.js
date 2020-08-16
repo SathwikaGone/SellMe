@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, View, FlatList } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  FlatList,
+  TouchableHighlight,
+} from "react-native";
 import ListingContainer from "../components/listingContainer";
 import Screen from "../components/screen";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
@@ -35,16 +41,21 @@ export default function MessageScreen() {
   const [refreshingData, setrefreshingData] = useState(false);
   const [Data, setData] = useState(initialmessages);
   let renderitem = ({ item }) => (
-    <ListingContainer
-      uimage={item.image}
-      name={item.name}
-      listings={item.description}
-      renderRightActions={() => {
-        <View style={styles.box}>
-          <MaterialCommunityIcons name="trash-can" />
-        </View>;
-      }}
-    />
+    <TouchableHighlight
+      onPress={() => console.log("item")}
+      underlayColor="#DDDDDD"
+    >
+      <ListingContainer
+        uimage={item.image}
+        name={item.name}
+        listings={item.description}
+        renderRightActions={() => {
+          <View style={styles.box}>
+            <MaterialCommunityIcons name="trash-can" />
+          </View>;
+        }}
+      />
+    </TouchableHighlight>
   );
   return (
     <Screen style={styles.container}>

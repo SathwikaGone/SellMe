@@ -6,8 +6,9 @@ import ViewImage from "./src/screens/ViewImage";
 import DisplayCard from "./src/screens/DisplayCard";
 import ListingDetails from "./src/screens/listingDetails";
 import MessageScreen from "./src/screens/MessageScreen";
+import MyAccountScreen from "./src/screens/MyAccountScreen";
 export default function App() {
-  return <MessageScreen />;
+  return <MyAccountScreen />;
 }
 
 const styles = StyleSheet.create({

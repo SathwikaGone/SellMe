@@ -1,5 +1,7 @@
 export default {
-  primary: "pink",
-  secondary: "lightblue",
+  primary: "#fc5c65",
+  secondary: "#4ecdc4",
+  yellow: "#ffe66d",
+  white: "#fff",
   black: "#000",
 };
