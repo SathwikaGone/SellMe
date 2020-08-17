@@ -5,4 +5,5 @@ export default {
   white: "#fff",
   black: "#000",
   coral: "#FF7F50",
+  Gainsboro: "#DCDCDC",
 };

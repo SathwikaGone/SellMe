@@ -9,9 +9,14 @@ import MessageScreen from "./src/screens/MessageScreen";
 import MyAccountScreen from "./src/screens/MyAccountScreen";
 import LoginScreen from "./src/screens/LoginScreen";
 import RegistrationScreen from "./src/screens/RegisterScreen";
-
+import AddItem from "./src/screens/AddItem";
+import Screen from "./src/components/screen";
 export default function App() {
-  return <RegistrationScreen />;
+  return (
+    <Screen>
+      <AddItem />
+    </Screen>
+  );
 }
 
 const styles = StyleSheet.create({
