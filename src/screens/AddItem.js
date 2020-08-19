@@ -5,6 +5,8 @@ import AppTextInput from "../components/AppTextInput";
 import Screen from "../components/screen";
 import AppButton from "../components/AppButton";
 import color from "../config/colors";
+import ImageInput from "../components/ImageInput";
+
 const data = [
   { value: "Furniture", id: 1 },
   { value: "Pet Suplies", id: 2 },
@@ -15,6 +17,7 @@ export default function AddItem() {
   const [selected, setselected] = useState("");
   return (
     <View>
+      <ImageInput />
       <AppTextInput placeholder="Title" />
       <AppTextInput placeholder="Price" />
       <AppPicker
