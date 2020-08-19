@@ -5,6 +5,7 @@ import {
   View,
   FlatList,
   TouchableHighlight,
+  DrawerLayoutAndroidComponent,
 } from "react-native";
 import ListingContainer from "../components/listingContainer";
 import Screen from "../components/screen";
@@ -14,7 +15,7 @@ const initialmessages = [
   {
     name: "sathwika",
     id: "ABCD",
-    description: "desc",
+    description: "desc ",
     image: require("../../assets/jacket.jpg"),
   },
   {
@@ -30,9 +31,11 @@ const initialmessages = [
     image: require("../../assets/jacket.jpg"),
   },
   {
-    name: "Laxmi",
+    name:
+      "Laxmi Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     id: "ABCDg",
-    description: "desc",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     image: require("../../assets/jacket.jpg"),
   },
 ];
@@ -48,6 +51,7 @@ export default function MessageScreen() {
       <ListingContainer
         uimage={item.image}
         name={item.name}
+        numberOfLines={1}
         listings={item.description}
         renderRightActions={() => {
           <View style={styles.box}>
@@ -64,16 +68,7 @@ export default function MessageScreen() {
         keyExtractor={(item) => item.id}
         renderItem={renderitem}
         refreshing={refreshingData}
-        onRefresh={() =>
-          setData([
-            {
-              name: "sathwika",
-              id: "ABCD",
-              description: "desc",
-              image: require("../../assets/jacket.jpg"),
-            },
-          ])
-        }
+        onRefresh={() => setData(initialmessages)}
       />
     </Screen>
   );

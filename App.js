@@ -11,6 +11,7 @@ import LoginScreen from "./src/screens/LoginScreen";
 import RegistrationScreen from "./src/screens/RegisterScreen";
 import AddItem from "./src/screens/AddItem";
 import Screen from "./src/components/screen";
+
 export default function App() {
   return (
     <Screen>

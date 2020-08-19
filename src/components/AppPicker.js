@@ -12,7 +12,7 @@ import color from "../config/colors";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { TouchableWithoutFeedback } from "react-native-gesture-handler";
 
-export default function AppPicker({ icon, title, data }) {
+export default function AppPicker({ icon, width, title, data }) {
   const [ShowModal, setShowModal] = useState(false);
   const [selectedcategory, setselectedcategory] = useState("");
   let titlep = selectedcategory ? selectedcategory.value : title;
@@ -22,7 +22,7 @@ export default function AppPicker({ icon, title, data }) {
         style={styles.container}
         onPress={() => setShowModal(true)}
       >
-        <Text style={styles.textinput}>{titlep}</Text>
+        <Text style={[styles.textinput, { width: width }]}>{titlep}</Text>
         {icon ? <MaterialCommunityIcons name={icon} size={30} /> : null}
       </TouchableWithoutFeedback>
       <Modal visible={ShowModal}>
@@ -57,8 +57,6 @@ const styles = StyleSheet.create({
   textinput: {
     padding: 5,
     fontSize: 18,
-    width: "100%",
-    flex: 1,
-    color: color.Gainsboro,
+    color: "black",
   },
 });
