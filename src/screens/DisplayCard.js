@@ -1,6 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
-import { Card, ListItem, Button, Icon } from "react-native-elements";
+import { StyleSheet } from "react-native";
 import ListOfItems from "../components/listOfItems";
 const items = [
   {

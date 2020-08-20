@@ -1,6 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, Image, SafeAreaView } from "react-native";
-import { Card, ListItem, Button, Icon } from "react-native-elements";
+import { StyleSheet, Text, Image, SafeAreaView } from "react-native";
 import ListingContainer from "../components/listingContainer";
 export default function listingDetails() {
   return (

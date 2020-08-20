@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  SafeAreaView,
-  ImageBackground,
-  PickerIOSComponent,
-  Image,
-} from "react-native";
+import { StyleSheet, Text, View, ImageBackground, Image } from "react-native";
 
 export default function Home() {
   return (

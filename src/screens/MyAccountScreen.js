@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import ListingContainer from "../components/listingContainer";
 import Screen from "../components/screen";
 import IconName from "../components/iconName";

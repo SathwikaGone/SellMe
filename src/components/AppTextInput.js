@@ -2,15 +2,25 @@ import React from "react";
 import { StyleSheet, Text, View, TextInput } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import color from "../config/colors";
+import ErrorMessage from "./ErrorMessage";
 
-export default function AppTextInput({ icon, width, ...otherProps }) {
+export default function AppTextInput({
+  icon,
+  width,
+  touched,
+  error,
+  ...otherProps
+}) {
   return (
-    <View style={styles.container}>
-      <MaterialCommunityIcons name={icon} size={25} />
-      <TextInput
-        {...otherProps}
-        style={[styles.textinput, (width = { width })]}
-      />
+    <View>
+      <View style={styles.container}>
+        <MaterialCommunityIcons name={icon} size={25} />
+        <TextInput
+          {...otherProps}
+          style={[styles.textinput, (width = { width })]}
+        />
+      </View>
+      <ErrorMessage touched={touched} error={error} />
     </View>
   );
 }

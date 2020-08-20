@@ -2,20 +2,28 @@ import React, { useState } from "react";
 import {
   StyleSheet,
   Text,
-  View,
   Modal,
   Button,
   FlatList,
   TouchableOpacity,
 } from "react-native";
-import color from "../config/colors";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { TouchableWithoutFeedback } from "react-native-gesture-handler";
+import ErrorMessage from "./ErrorMessage";
 
-export default function AppPicker({ icon, width, title, data }) {
+export default function AppPicker({
+  icon,
+  width,
+  title,
+  data,
+  touched,
+  error,
+  selectedCat,
+}) {
   const [ShowModal, setShowModal] = useState(false);
   const [selectedcategory, setselectedcategory] = useState("");
   let titlep = selectedcategory ? selectedcategory.value : title;
+
   return (
     <React.Fragment>
       <TouchableWithoutFeedback
@@ -35,6 +43,7 @@ export default function AppPicker({ icon, width, title, data }) {
               <Text
                 style={styles.textinput}
                 onPress={() => {
+                  selectedCat(item.value);
                   setselectedcategory(item);
                   setShowModal(false);
                 }}
@@ -45,6 +54,7 @@ export default function AppPicker({ icon, width, title, data }) {
           )}
         ></FlatList>
       </Modal>
+      <ErrorMessage touched={touched} error={error} />
     </React.Fragment>
   );
 }

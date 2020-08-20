@@ -1,12 +1,5 @@
 import React, { useState } from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  FlatList,
-  TouchableHighlight,
-  DrawerLayoutAndroidComponent,
-} from "react-native";
+import { StyleSheet, View, FlatList, TouchableHighlight } from "react-native";
 import ListingContainer from "../components/listingContainer";
 import Screen from "../components/screen";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
