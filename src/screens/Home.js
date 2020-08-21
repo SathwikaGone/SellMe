@@ -1,7 +1,14 @@
 import React from "react";
-import { StyleSheet, Text, View, ImageBackground, Image } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  ImageBackground,
+  Image,
+  TouchableOpacity,
+} from "react-native";
 
-export default function Home() {
+export default function Home({ navigation }) {
   return (
     <ImageBackground
       style={styles.background}
@@ -14,12 +21,18 @@ export default function Home() {
         ></Image>
         <Text style={styles.text}>Selle what you dont want</Text>
       </View>
-      <View style={styles.loginButton}>
+      <TouchableOpacity
+        style={styles.loginButton}
+        onPress={() => navigation.navigate("LoginScreen")}
+      >
         <Text style={styles.appText}>Login</Text>
-      </View>
-      <View style={styles.signupButton}>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.signupButton}
+        onPress={() => navigation.navigate("RegistrationScreen")}
+      >
         <Text style={styles.appText}>Sign Up</Text>
-      </View>
+      </TouchableOpacity>
     </ImageBackground>
   );
 }
